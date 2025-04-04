@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ceucios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Converta Fahrenheit para Celsius</h1>
+    
+    <div>
+        <p>escreva os Fahrenheit  <input type="number" name="f" id="f"></p>
+        <p><input type="button" value="converter" onclick="converter()"></p>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function converter() {
+        let f  = document.getElementById('f').value
+        let res = document.getElementById('res')
+        let c = (5/9) * (f-32)
+
+        if (f = 0) {
+            res.innerHTML = `digite a temperatura antes de preoseguir`
+        } else {
+            res.innerHTML = `A temperatura atual em celsius e igual a: ${c}`
+        }
+        if (c < 12) {
+            document.body.style.backgroundColor = "#8FE1C4";
+        }
+}
+    </script>
+
+</body>
+</html>

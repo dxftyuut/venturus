@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite 3 números</h1>
+    <div>
+        <p>Digite o primeiro número (a): <input type="number" id="a"></p>
+        <p>Digite o segundo número (b): <input type="number" id="b"></p>
+        <p>Digite o terceiro número (c): <input type="number" id="c"></p>
+        <p><button onclick="revelar()">Verificar</button></p>
+        
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function revelar() {
+            let a = Number(document.getElementById('a').value);
+            let b = Number(document.getElementById('b').value);
+            let c = Number(document.getElementById('c').value);
+            let resultado = "";
+
+            resultado += `a == b? ${a == b} <br>`;
+            resultado += `a > b? ${a > b} <br>`;
+            resultado += `a >= b? ${a >= b} <br>`;
+            resultado += `c < b? ${c < b} <br>`;
+            resultado += `c != b? ${c != b} <br>`;
+
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

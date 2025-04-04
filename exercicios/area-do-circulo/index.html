@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area do circulo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>descubra a área do circulo</h1>
+    
+    <div>
+        <p>digite o raio da circunferencia</p>
+
+        <p><input type="number" name="raio" id="iraio"></p>
+
+        <input type="button" value="descobrir" onclick="des()">
+
+        <p id="area"></p>
+
+        <p id="perimetro"></p>
+    </div>
+
+    <script>
+        function des() {
+            let r = Number(document.getElementById('iraio').value);
+            let a = document.getElementById('area')
+            let p = document.getElementById('perimetro')
+            let ra = Number(r**2 * 3.14)
+            let rp = Number(2*3.14*r)
+
+            if (r <= 0) {
+                alert('digite um raio positivo');
+                return;
+            } else {
+                a.innerHTML = `A area da sua circunferencia é: ${ra}`
+                p.innerHTML = `O perimetro do circulo é: ${rp}`
+            }
+        }
+    </script>
+
+</body>
+</html>
