@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Cartesiano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Plano Cartesiano</h1>
+    
+    <div>
+        <p>Digite o valor de x: <input type="number" name="numx" id="numx"></p>
+        <p>Digite o valor de y: <input type="number" name="numy" id="numy"></p>
+        <p><input type="button" value="Ver plano cartesiano" onclick="ver()"></p>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function ver() {
+            let nx = Number(document.getElementById('numx').value);
+            let ny = Number(document.getElementById('numy').value);
+            let res = document.getElementById('res');
+            
+            if (nx > 0 && ny > 0) {
+                res.innerHTML = 'Essas coordenadas são referentes ao <strong>Quadrante 1</strong>';
+            } else if (nx < 0 && ny > 0) {
+                res.innerHTML = 'Essas coordenadas são referentes ao <strong>Quadrante 2</strong>';
+            } else if (nx < 0 && ny < 0) {
+                res.innerHTML = 'Essas coordenadas são referentes ao <strong>Quadrante 3</strong>';
+            } else if (nx > 0 && ny < 0) {
+                res.innerHTML = 'Essas coordenadas são referentes ao <strong>Quadrante 4</strong>';
+            } else {
+                res.innerHTML = 'As coordenadas estão sobre um dos eixos ou na origem.';
+            }
+        }
+    </script>
+
+</body>
+</html>

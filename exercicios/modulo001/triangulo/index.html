@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Triangulos</h1>
+    <div>
+        <h2>digite os lados de um triangulo</h2>
+
+        <p>
+            Lado A: <input type="number" placeholder="lado a" name="ladoa" id="ladoa">
+            Lado B: <input type="number" placeholder="lado b" name="ladob" id="ladob"><br>
+            Lado c: <input type="number" placeholder="lado c" name="ladoc" id="ladoc">
+        </p>
+
+        <p><input type="button" value="ver" onclick="ver()"></p>
+
+        <p id="res"></p>
+        
+    </div>
+    
+    <script>
+        function ver() {
+            let a = Number(document.getElementById('ladoa').value);
+            let b = Number(document.getElementById('ladob').value);
+            let c = Number(document.getElementById('ladoc').value);
+            let res = document.getElementById('res')
+
+            if ((a + b > c) && (a + c > b) && (c + b >a)) {
+                let tipo;
+
+                switch (true) {
+                    case (a == b && b == c):
+                        res.innerHTML = `esse e um triangulo equilatero`
+                        break;
+                    case (a == b || a == c || b == c):
+                        res.innerHTML = `esse triangulo e isosceles`
+                        break;
+                    default:
+                        res.innerHTML = `Escaleno`
+                        break;
+                }
+
+            }
+
+        }
+    </script>
+
+</body>
+</html>

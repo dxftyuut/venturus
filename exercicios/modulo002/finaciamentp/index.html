@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>financiamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Faça aqui seu financiamento</h1>
+    
+    <div>
+        <p><label for="sal">sálario: <input type="number" name="sal" id="sal"></label></p>
+        <p><label for="fin">Qual o valor do financiamento? <input type="number" name="fin" id="fin"></label></p>
+        <p><input type="button" value="verificar" onclick="ver()"></p>
+        <p id="res"></p>
+        <p id="res2"></p>
+    </div>
+
+    <script>
+        function ver() {
+            let s = Number(document.getElementById('sal').value);
+            let f = Number(document.getElementById('fin').value);
+            let res = document.getElementById('res')
+            let res2 = document.getElementById('res2')
+
+            if (f <= s*5) {
+                res.innerHTML = `Financiamento concedido`
+            } else {
+                res.innerHTML = 'Financiamento negado'
+            }
+
+            res2.innerHTML = 'Obrigado por nos consultar'
+
+        }
+    </script>
+
+</body>
+</html>

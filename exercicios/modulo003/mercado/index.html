@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mercado</h1>
+
+    <div>
+        <p>digite o codigo do produto: <input type="number" name="codigo" id="codigo"></p>
+        <p><input type="button" value="verificar produto" id="botao" onclick="ver()"></p>
+        <p id="res"></p>
+        <p id="res2"></p>
+    </div>
+    
+    <script>
+        function ver() {
+            let codigo = Number(document.getElementById('codigo').value);
+            let res = document.getElementById('res')
+            let b = document.getElementById('botao')
+
+            if (codigo != 1 && codigo!= 2 && codigo!= 3 && codigo != 4) {
+                res.innerHTML = `O codigo ${codigo} e invalido, digite um codigo valido.`
+            } else {
+                if (codigo == 1) {
+                    res.innerHTML += 'Produto A <br>'
+                } else {
+                    if (codigo == 2) {
+                        res.innerHTML += 'Produto B <br>'
+                    } else {
+                        if (codigo == 3) {
+                            res.innerHTML += 'Produto C <br>' 
+                        } else {
+                            if (codigo == 4) {
+                                res.innerHTML = 'Muito obrigado pela compra <br>'
+                                b.style.display = 'none';
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

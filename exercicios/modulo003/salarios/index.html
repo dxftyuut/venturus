@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salarios</title>
+</head>
+<body>
+    <h1>salario anual</h1>
+    
+    <div>
+        <p>Digite o salário: <input type="number" name="sal" id="sal"></p>
+        <p><input type="button" value="verificar sálarios" onclick="ver()"></p>
+        <p id="res1"></p>
+        <p id="res2"></p>
+        <p id="res3"></p>
+        <p id="res4"></p>
+        <p id="res5"></p>
+        <p id="res6"></p>
+    </div>
+
+    <script>
+        function ver() {
+            let s = Number(document.getElementById('sal').value);
+            let r1 = document.getElementById('res1');
+            let r2 = document.getElementById('res2');
+            let r3 = document.getElementById('res3');
+            let r4 = document.getElementById('res4');
+            let r5 = document.getElementById('res5');
+            let r6 = document.getElementById('res6');
+
+            if (s == 0) {
+                r1.innerHTML = 'Digite um salario valido'
+            }
+
+
+
+        }
+    </script>
+
+</body>
+</html>

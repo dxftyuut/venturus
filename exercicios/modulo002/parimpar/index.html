@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>par ou impar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>detector de números pares ou impares</h1>
+    <div>
+        <p><label for="numero">digite um número: <input type="number" name="num" id="inum"></label> </p>
+        <p><input type="button" value="impar ou par" onclick="ver()"></p>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function ver() {
+            let n = Number(document.getElementById('inum').value);
+            let res = document.getElementById('res')
+
+            if (n < 0) {
+                res.innerHTML = `O número ${n} e um número negativo, digite um numero positivo`
+            } else {
+                if (n % 2 == 0) {
+                    res.innerHTML = `Esse número e par`
+                } else {
+                    res.innerHTML = `Esse número e impar`
+                }
+            } 
+        }
+    </script>
+
+</body>
+</html>

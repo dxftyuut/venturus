@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificador de Números Primos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Verificador de Número Primo</h1>
+  <div>
+  <p>Digite um número:</p>
+
+  <input type="number" id="numeroInput" />
+  <button onclick="verificarPrimo()">Verificar</button>
+
+  <p id="resultado"></p>
+</div>
+  <script>
+    function ehPrimo(numero) {
+      if (numero <= 1) return false;
+      if (numero === 2) return true;
+      if (numero % 2 === 0) return false;
+
+      let i = 3;
+      const limite = Math.sqrt(numero);
+
+      while (i <= limite) {
+        if (numero % i === 0) {
+          return false;
+        }
+        i += 2;
+      }
+
+      return true;
+    }
+
+    function verificarPrimo() {
+      const input = document.getElementById("numeroInput").value;
+      const numero = parseInt(input);
+      const resultado = document.getElementById("resultado");
+
+      if (isNaN(numero)) {
+        resultado.textContent = "Por favor, digite um número válido.";
+        return;
+      }
+
+      if (ehPrimo(numero)) {
+        resultado.textContent = `${numero} é um número primo.`;
+      } else {
+        resultado.textContent = `${numero} não é um número primo.`;
+      }
+    }
+  </script>
+
+</body>
+</html>

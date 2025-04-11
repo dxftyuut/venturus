@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Doações</h1>
+
+    <div id="div">
+        <h2>quanto você deseja doar?</h2>
+        <p><input type="button" value="Doar R$10" onclick="doardez()" id="dez"></p>
+        <p><input type="button" value="Doar R$25" onclick="doarvintecinco()" id="vintecinco"></p>
+        <p><input type="button" value="Doar R$50" onclick="doarcinquenta()" id="cinquenta"></p>
+        <p><input type="button" value="outro valor" onclick="outrovalor()" id="outro"></p>
+        <p><input type="button" value="cancelar" onclick="cancelar()" id="cancelar"></p>
+        <p id="res"></p>
+        <p id="res2"></p>
+    </div>
+
+    <script>
+        function doardez() {
+            let dez = document.getElementById('dez');
+            let vintecinco = document.getElementById('vintecinco');
+            let cinquenta = document.getElementById('cinquenta');
+            let outro = document.getElementById('outro');
+            let cancelar = document.getElementById('cancelar');
+            let res = document.getElementById('res')
+
+            dez.style.display = 'none';
+            vintecinco.style.display = 'none';
+            cinquenta.style.display = 'none';
+            outro.style.display = 'none';
+            cancelar.style.display = 'none';
+
+            res.innerHTML = 'Você doou R$10, muito obrigado!!!'
+}
+
+        function doarvintecinco() {
+            let dez = document.getElementById('dez');
+            let vintecinco = document.getElementById('vintecinco');
+            let cinquenta = document.getElementById('cinquenta');
+            let outro = document.getElementById('outro');
+            let cancelar = document.getElementById('cancelar');
+            let res = document.getElementById('res')
+
+            dez.style.display = 'none';
+            vintecinco.style.display = 'none';
+            cinquenta.style.display = 'none';
+            outro.style.display = 'none';
+            cancelar.style.display = 'none';
+
+            res.innerHTML = 'Você doou R$25, muito obrigado!!!'
+}
+
+        function doarcinquenta() {
+            let dez = document.getElementById('dez');
+            let vintecinco = document.getElementById('vintecinco');
+            let cinquenta = document.getElementById('cinquenta');
+            let outro = document.getElementById('outro');
+            let cancelar = document.getElementById('cancelar');
+            let res = document.getElementById('res')
+
+            dez.style.display = 'none';
+            vintecinco.style.display = 'none';
+            cinquenta.style.display = 'none';
+            outro.style.display = 'none';
+            cancelar.style.display = 'none';
+
+            res.innerHTML = 'Você doou R$50, muito obrigado!!!'
+}
+
+        function doarcinquenta() {
+            let dez = document.getElementById('dez');
+            let vintecinco = document.getElementById('vintecinco');
+            let cinquenta = document.getElementById('cinquenta');
+            let outro = document.getElementById('outro');
+            let cancelar = document.getElementById('cancelar');
+            let res = document.getElementById('res')
+
+            dez.style.display = 'none';
+            vintecinco.style.display = 'none';
+            cinquenta.style.display = 'none';
+            outro.style.display = 'none';
+            cancelar.style.display = 'none';
+
+           res.innerHTML = 'Você doou R$50, muito obrigado por sua ajuda!!'
+}
+
+
+function outrovalor() {
+    let dez = document.getElementById('dez');
+    let vintecinco = document.getElementById('vintecinco');
+    let cinquenta = document.getElementById('cinquenta');
+    let outro = document.getElementById('outro');
+    let cancelar = document.getElementById('cancelar');
+    let res = document.getElementById('res')
+    let res2 = document.getElementById('res2')
+
+    dez.style.display = 'none';
+    vintecinco.style.display = 'none';
+    cinquenta.style.display = 'none';
+    outro.style.display = 'none';
+    cancelar.style.display = 'none';
+
+    res.innerHTML = '<input type="number" name="outroin" id="outroin">';
+    res2.innerHTML = '<input type="button" value="enviar" onclick="outro2()">';
+}
+
+function outro2() {
+    let num = document.getElementById('outroin').value;
+    let res = document.getElementById('res');
+    res.innerHTML = `Você doou R$${num}, muito obrigado pela sua ajuda.`;
+    res2.style.display = 'none'
+}
+
+        function cancelar() {
+            let dez = document.getElementById('dez');
+            let vintecinco = document.getElementById('vintecinco');
+            let cinquenta = document.getElementById('cinquenta');
+            let outro = document.getElementById('outro');
+            let cancelar = document.getElementById('cancelar');
+            let res = document.getElementById('res')
+
+            dez.style.display = 'none';
+            vintecinco.style.display = 'none';
+            cinquenta.style.display = 'none';
+            outro.style.display = 'none';
+            cancelar.style.display = 'none';
+
+            res.innerHTML = 'Você cancelou a doação, muito obrigado pela atenção'
+}
+    </script>
+    
+</body>
+</html> 

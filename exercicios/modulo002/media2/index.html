@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>média</title>
+</head>
+<body>
+    <h1>Descubra sua média</h1>
+
+    <div>
+        <p>digite seu nome: <input type="text" id="inome"></p>
+        <p>avaliação 1: <input type="number" name="nota1" id="nota1"></p>
+        <p>avaliação 2: <input type="number" name="nota2" id="nota2"></p>
+        <p>avaliação 3: <input type="number" name="nota3" id="nota3"></p>
+        <p><input type="button" value="ver média" onclick="ver()"></p>
+        <p id="res"></p>
+    </div>
+
+    <script>
+        function ver() {
+            let nome = document.getElementById('inome')
+            let n1 = Number(document.getElementById('nota1').value);
+            let n2 = Number(document.getElementById('nota2').value);
+            let n3 = Number(document.getElementById('nota3').value);
+            let media = (n1 + n2 + n3) / 3
+            let res = document.getElementById('res');
+
+            if (media >= 7 && media <= 10) {
+                res.innerHTML = `Parabens ${nome} sua media foi ${media}, você foi aprovado`
+            } else {
+                if (media >= 5 && media <= 6) {
+                    res.innerHTML = `${nome} infelizmente você está de recuperação`
+                } else {
+                    if (media >= 1 && media <= 4) {
+                        res.innerHTML = `${nome} infelizmente você foi reprovado.`
+                    }
+                }
+            }
+
+        }
+    </script>
+
+</body>
+</html>
